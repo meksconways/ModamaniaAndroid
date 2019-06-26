@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NoteWorthyAppearance">
+        <item name="android:fontFamily">@font/nwbold</item>
+    </style>
+
+    <style name="OpenSansAppearance">
+        <item name="android:fontFamily">@font/ossemibold</item>
+    </style>
+
 </resources>
