@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:padding="16dp"
+    >
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:cardCornerRadius="32dp"
+        >
+
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/girl1"
+                       android:scaleType="centerCrop"
+                       android:adjustViewBounds="true"
+            />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+        >
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:maxLines="1"
+                      android:text="girlone"
+                      android:fontFamily="@font/osbold"
+                      android:textColor="@color/darkTextColor"
+                      android:textSize="17sp"
+            />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:maxLines="1"
+                      android:text="16 Şubat Salı"
+                      android:fontFamily="@font/osregular"
+                      android:textColor="#545454"
+                      android:textSize="15sp"
+            />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="16dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="16dp"
+              android:fontFamily="@font/osregular"
+              android:textColor="@color/darkTextColor"
+              android:textSize="16sp"
+              android:text="@string/appbar_scrolling_view_behavior"
+    />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+    >
+
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                app:cardCornerRadius="8dp"
+        >
+
+            <ImageView android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/girl1"
+                       android:scaleType="centerCrop"
+                       android:adjustViewBounds="true"
+            />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+
+    >
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:text="0"
+                app:iconTint="#797979"
+                android:textColor="#797979"
+                android:id="@+id/btnAllLike"
+                app:icon="@drawable/ic_likefilled"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:text="0"
+                app:iconTint="#797979"
+                android:textColor="#797979"
+                android:id="@+id/btnAllComment"
+                app:icon="@drawable/ic_comment"
+                app:layout_constraintStart_toEndOf="@id/btnAllLike"
+        />
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:text="0"
+                app:iconTint="#797979"
+                android:textColor="#797979"
+                android:id="@+id/btnAllViewed"
+                app:icon="@drawable/ic_visibility"
+                app:layout_constraintStart_toEndOf="@id/btnAllComment"
+        />
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/white"
+                app:icon="@drawable/ic_addcoll"
+                android:stateListAnimator="@null"
+                android:id="@+id/btnAddColl"
+                android:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="54dp"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/white"
+                app:icon="@drawable/ic_likeborder"
+                android:stateListAnimator="@null"
+                android:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toStartOf="@id/btnAddColl"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="#a5a5a5"
+          android:layout_marginStart="16dp"
+    />
+
+</LinearLayout>

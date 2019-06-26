@@ -55,7 +55,7 @@
             android:background="#fff"
             app:elevation="8dp"
             app:itemIconSize="28dp"
-            app:itemRippleColor="@null"
+            app:itemRippleColor="#30a044ff"
             app:layout_constraintBottom_toBottomOf="parent"
             app:itemHorizontalTranslationEnabled="false"
             app:labelVisibilityMode="labeled"

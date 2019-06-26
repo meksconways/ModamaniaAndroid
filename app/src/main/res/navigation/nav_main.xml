@@ -8,24 +8,20 @@
 
     <fragment android:id="@+id/tab1"
               android:name="com.modart.modamania.feed.FeedFragment"
-              android:label="feed_fragment"
               tools:layout="@layout/feed_fragment"/>
 
 
-    <fragment android:id="@+id/tab2"
+    <fragment android:id="@+id/tab3"
               android:name="com.modart.modamania.notification.NotificationFragment"
-              android:label="notification_fragment"
               tools:layout="@layout/notification_fragment"/>
 
 
-    <fragment android:id="@+id/tab3"
+    <fragment android:id="@+id/tab2"
               android:name="com.modart.modamania.trending.TrendingFragment"
-              android:label="trending_fragment"
               tools:layout="@layout/trending_fragment"/>
 
 
     <fragment android:id="@+id/tab4"
               android:name="com.modart.modamania.profile.ProfileFragment"
-              android:label="profile_fragment"
               tools:layout="@layout/profile_fragment"/>
 </navigation>

@@ -10,7 +10,12 @@
     </fragment>
     <fragment android:id="@+id/splashFragment" android:name="com.modart.modamania.splash.SplashFragment"
               android:label="splash_fragment" tools:layout="@layout/splash_fragment">
-        <action android:id="@+id/action_splashFragment_to_loginFragment" app:destination="@id/loginFragment"/>
+
+        <action android:id="@+id/action_splashFragment_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:popUpToInclusive="true"
+                app:popUpTo="@id/splashFragment"
+                />
     </fragment>
     <fragment android:id="@+id/signUpFragment" android:name="com.modart.modamania.signup.SignUpFragment"
               android:label="sign_up_fragment" tools:layout="@layout/sign_up_fragment"/>

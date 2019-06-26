@@ -1,14 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/gradientback"
         tools:context=".signup.SignUpFragment">
 
-    <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello"/>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-</FrameLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+        >
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Hesap Oluştur"
+                      android:textColor="@color/white"
+                      android:textSize="28sp"
+                      android:layout_marginTop="48dp"
+                      android:layout_marginStart="32dp"
+                      android:fontFamily="@font/osbold"
+                      android:layout_marginEnd="16dp"
+
+            />
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/white"
+                  android:layout_marginStart="32dp"
+                  android:layout_marginTop="16dp"
+                  android:layout_marginEnd="8dp"
+            />
+
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="48dp"
+                      android:singleLine="true"
+                      android:layout_marginTop="24dp"
+                      android:backgroundTint="@color/white"
+                      android:background="@drawable/edittext_back"
+                      android:layout_marginStart="32dp"
+                      android:layout_marginEnd="32dp"
+                      android:layout_marginBottom="20dp"
+                      android:maxLines="1"
+                      android:hint="Kullanıcı Adı"
+                      android:paddingStart="16dp"
+                      android:paddingEnd="16dp"
+                      android:textAlignment="center"
+                      android:id="@+id/edtUsername"
+                      android:fontFamily="@font/osregular"
+            />
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="48dp"
+                      android:singleLine="true"
+                      android:backgroundTint="@color/white"
+                      android:background="@drawable/edittext_back"
+                      android:layout_marginStart="32dp"
+                      android:layout_marginEnd="32dp"
+                      android:layout_marginBottom="20dp"
+                      android:maxLines="1"
+                      android:hint="İsim Soyisim"
+                      android:paddingStart="16dp"
+                      android:paddingEnd="16dp"
+                      android:textAlignment="center"
+                      android:id="@+id/edtFullName"
+                      android:fontFamily="@font/osregular"
+            />
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="48dp"
+                      android:singleLine="true"
+                      android:backgroundTint="@color/white"
+                      android:background="@drawable/edittext_back"
+                      android:layout_marginStart="32dp"
+                      android:layout_marginEnd="32dp"
+                      android:layout_marginBottom="20dp"
+                      android:maxLines="1"
+                      android:hint="E Posta"
+                      android:paddingStart="16dp"
+                      android:paddingEnd="16dp"
+                      android:inputType="textEmailAddress"
+                      android:textAlignment="center"
+                      android:id="@+id/edtEmail"
+                      android:fontFamily="@font/osregular"
+            />
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="48dp"
+                      android:singleLine="true"
+                      android:backgroundTint="@color/white"
+                      android:background="@drawable/edittext_back"
+                      android:layout_marginStart="32dp"
+                      android:layout_marginEnd="32dp"
+                      android:layout_marginBottom="20dp"
+                      android:maxLines="1"
+                      android:hint="Parola"
+                      android:paddingStart="16dp"
+                      android:paddingEnd="16dp"
+                      android:inputType="textPassword"
+                      android:textAlignment="center"
+                      android:id="@+id/edtPasword"
+                      android:fontFamily="@font/osregular"
+            />
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:cornerRadius="24dp"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/btnSignUp"
+                    android:text="Kaydol"
+                    android:fontFamily="@font/osbold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/progress"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginEnd="64dp"
+                    app:strokeWidth="1.5dp"
+                    app:strokeColor="@color/white"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@android:color/transparent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+            />
+
+            <ProgressBar android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:indeterminateTint="@color/white"
+                         app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                         app:layout_constraintEnd_toEndOf="parent"
+                         android:layout_marginBottom="24dp"
+                         android:id="@+id/progress"
+                         android:layout_gravity="center"
+            />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -8,8 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.modart.modamania.R
+import com.modart.modamania.base.BaseFragment
+import com.modart.modamania.util.ToolbarFont
 
-class TrendingFragment : Fragment() {
+class TrendingFragment : BaseFragment() {
 
     companion object {
         fun newInstance() = TrendingFragment()
@@ -27,7 +29,8 @@ class TrendingFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(TrendingViewModel::class.java)
-        // TODO: Use the ViewModel
+        setToolbarTitle("Trendler")
+        setToolbarFont(ToolbarFont.OS)
     }
 
 }
