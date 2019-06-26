@@ -11,7 +11,7 @@ import com.modart.modamania.util.ToolbarFont
 
 abstract class BaseFragment : Fragment(){
 
-    lateinit var mainVM: MainActivityVM
+    private lateinit var mainVM: MainActivityVM
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

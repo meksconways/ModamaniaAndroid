@@ -1,6 +1,5 @@
 package com.modart.modamania.login
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,8 +13,8 @@ import javax.inject.Inject
 
 class LoginViewModel
 @Inject constructor(
-    private val apiRequester: ApiRequester)
-    : ViewModel() {
+    private val apiRequester: ApiRequester
+) : ViewModel() {
 
     private val pageLoading = MutableLiveData<Boolean>(false)
     private val routeMain = MutableLiveData<Boolean>(false)
@@ -26,11 +25,11 @@ class LoginViewModel
     fun getRouteMain(): LiveData<Boolean> = routeMain
     fun getAlertMessage(): LiveData<String?> = alertMessage
 
-    fun clearAlert(){
+    fun clearAlert() {
         alertMessage.value = null
     }
 
-    fun login(username: String, password: String){
+    fun login(username: String, password: String) {
         val map = HashMap<String, String>()
         map["username"] = username
         map["password"] = password
@@ -63,7 +62,6 @@ class LoginViewModel
     override fun onCleared() {
         compositeDisposable.clear()
     }
-
 
 
 }

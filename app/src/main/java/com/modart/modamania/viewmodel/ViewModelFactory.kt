@@ -20,7 +20,6 @@ class ViewModelFactory
         } catch (e: Exception) {
             throw RuntimeException("Error Creating vm for class ${modelClass.simpleName}", e)
         }
-
     }
 
 

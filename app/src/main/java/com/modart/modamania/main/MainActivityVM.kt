@@ -21,11 +21,11 @@ class MainActivityVM : ViewModel() {
     fun getIsFullScreen(): LiveData<Boolean> = isFullScreen
     fun getToolbarTitle(): LiveData<String> = toolbarTitle
 
-    fun setToolbarFontState(state: ToolbarFont){
+    fun setToolbarFontState(state: ToolbarFont) {
         this.toolbarFontState.value = state
     }
 
-    fun setToolbarTitle(title: String){
+    fun setToolbarTitle(title: String) {
         this.toolbarTitle.value = title
     }
 
