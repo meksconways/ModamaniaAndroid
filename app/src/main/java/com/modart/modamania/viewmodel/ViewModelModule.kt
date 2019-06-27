@@ -10,14 +10,15 @@ import dagger.multibindings.IntoMap
 @Module
 abstract class ViewModelModule {
 
-//    @Binds
-//    @IntoMap
-//    @ViewModelKey (FeedViewModel::class)
-//    abstract fun bindFeedViewModel(viewModel: FeedViewModel): ViewModel
+    @Binds
+    @IntoMap
+    @ViewModelKey (FeedViewModel::class)
+    abstract fun bindFeedViewModel(viewModel: FeedViewModel): ViewModel
 
     @Binds
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
     abstract fun bindLoginVM(viewModel: LoginViewModel): ViewModel
+
 
 }

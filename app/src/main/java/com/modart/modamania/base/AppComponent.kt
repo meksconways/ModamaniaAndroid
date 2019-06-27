@@ -21,6 +21,7 @@ interface AppComponent {
 
     fun inject(application: ModamaniaApp)
     fun inject(loginFragment: LoginFragment)
+    fun inject(baseFragment: BaseFragment)
 
     @Component.Builder
     interface Builder {

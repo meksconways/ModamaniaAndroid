@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.modart.modamania.networking.ApiRequester
+import com.modart.modamania.sharedpreferences.SpHelper
 import com.modart.modamania.util.getApiBadRequestError
 import com.modart.modamania.util.reqBodytoJson
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -13,7 +14,8 @@ import javax.inject.Inject
 
 class LoginViewModel
 @Inject constructor(
-    private val apiRequester: ApiRequester
+    private val apiRequester: ApiRequester,
+    private val spHelper: SpHelper
 ) : ViewModel() {
 
     private val pageLoading = MutableLiveData<Boolean>(false)
@@ -39,9 +41,10 @@ class LoginViewModel
                 .doOnSubscribe { pageLoading.value = true }
                 .subscribe(
                     {
-
+                        spHelper.save(it.token,it.user.user_id)
                         pageLoading.value = false
                         routeMain.value = true
+
                     },
                     {
 

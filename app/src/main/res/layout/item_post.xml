@@ -8,7 +8,9 @@
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:orientation="horizontal"
-                  android:padding="16dp"
+                  android:paddingTop="16dp"
+                  android:paddingEnd="16dp"
+                  android:paddingStart="16dp"
     >
 
         <com.google.android.material.card.MaterialCardView
@@ -22,6 +24,7 @@
                        android:src="@drawable/girl1"
                        android:scaleType="centerCrop"
                        android:adjustViewBounds="true"
+                       android:id="@+id/imgUser"
             />
 
 
@@ -39,6 +42,7 @@
                       android:layout_height="wrap_content"
                       android:maxLines="1"
                       android:text="girlone"
+                      android:id="@+id/txtUsername"
                       android:fontFamily="@font/osbold"
                       android:textColor="@color/darkTextColor"
                       android:textSize="17sp"
@@ -46,6 +50,7 @@
             <TextView android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:maxLines="1"
+                      android:id="@+id/txtDate"
                       android:text="16 Şubat Salı"
                       android:fontFamily="@font/osregular"
                       android:textColor="#545454"
@@ -62,9 +67,11 @@
               android:layout_marginBottom="16dp"
               android:layout_marginStart="16dp"
               android:layout_marginEnd="16dp"
+              android:layout_marginTop="8dp"
               android:fontFamily="@font/osregular"
               android:textColor="@color/darkTextColor"
               android:textSize="16sp"
+              android:id="@+id/txtDesc"
               android:text="@string/appbar_scrolling_view_behavior"
     />
 
@@ -90,7 +97,7 @@
             <ImageView android:layout_width="match_parent"
                        android:layout_height="match_parent"
                        android:src="@drawable/girl1"
-                       android:scaleType="centerCrop"
+                       android:id="@+id/imgPost"
                        android:adjustViewBounds="true"
             />
 
@@ -169,7 +176,7 @@
 
     <View android:layout_width="match_parent"
           android:layout_height="1dp"
-          android:background="#a5a5a5"
+          android:background="#d9d9d9"
           android:layout_marginStart="16dp"
     />
 
