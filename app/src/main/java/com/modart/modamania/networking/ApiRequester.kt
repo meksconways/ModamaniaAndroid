@@ -2,6 +2,7 @@ package com.modart.modamania.networking
 
 import com.modart.modamania.model.FeedModel
 import com.modart.modamania.model.LoginModel
+import com.modart.modamania.model.ProfileModel
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 import okhttp3.RequestBody
@@ -16,6 +17,9 @@ class ApiRequester @Inject constructor(private val apiService: ApiService) {
 
     fun getFeed(token: String): Single<List<FeedModel>> =
         apiService.getFeed(token).subscribeOn(Schedulers.io())
+
+    fun getMyProfile(token: String): Single<ProfileModel> =
+            apiService.getMyProfile(token).subscribeOn(Schedulers.io())
 
 
 }

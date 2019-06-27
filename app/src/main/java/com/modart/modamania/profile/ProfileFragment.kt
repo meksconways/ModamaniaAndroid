@@ -6,16 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.modart.modamania.R
 import com.modart.modamania.base.BaseFragment
 import com.modart.modamania.util.ToolbarFont
+import com.modart.modamania.util.loadImage
+import kotlinx.android.synthetic.main.profile_fragment.*
 
 class ProfileFragment : BaseFragment() {
 
-    companion object {
-        fun newInstance() = ProfileFragment()
-    }
 
     private lateinit var viewModel: ProfileViewModel
 
@@ -28,9 +29,36 @@ class ProfileFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(ProfileViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,factory).get(ProfileViewModel::class.java)
         setToolbarTitle("Profil")
         setToolbarFont(ToolbarFont.OS)
+        observeVM()
+
+        rv_profile.adapter = ProfilePostAdapter(viewModel,this)
+        rv_profile.layoutManager = LinearLayoutManager(context)
+
+    }
+
+    private fun observeVM() {
+        viewModel.getPageLoading().observe(this, Observer {
+            if (it) rv_profile.showShimmerAdapter() else rv_profile.hideShimmerAdapter()
+        })
+
+        viewModel.getProfileData().observe(this, Observer {
+            it?.let { model ->
+
+                if (model.user.user_folder != "default.jpeg"){
+                    imgProfile.loadImage(model.user.user_folder)
+                }
+
+                txtFullName.text = model.user.name_surname
+                txtUsername.text = model.user.username
+                followingCount.text = "${model.user.following_count}"
+                postCount.text = "${model.user.total_post_count}"
+                followersCount.text = "${model.user.follower_count}"
+
+            }
+        })
     }
 
 }

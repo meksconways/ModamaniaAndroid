@@ -1,11 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
         tools:context=".profile.ProfileFragment">
 
 
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+    >
 
-</FrameLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+        >
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:cardCornerRadius="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+            >
+
+                <ImageView android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:id="@+id/imgProfile"
+                           android:src="@drawable/girl0"
+                           android:scaleType="centerCrop"
+                           android:adjustViewBounds="true"
+                />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Jane Black"
+                      android:textAlignment="center"
+                      android:textSize="24sp"
+                      android:textColor="@color/darkTextColor"
+                      android:fontFamily="@font/osbold"
+                      android:layout_marginTop="16dp"
+                      android:id="@+id/txtFullName"
+            />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="blackjane"
+                      android:textAlignment="center"
+                      android:textSize="16sp"
+                      android:textColor="#545454"
+                      android:fontFamily="@font/osregular"
+                      android:id="@+id/txtUsername"
+            />
+
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_gravity="center"
+                          android:layout_height="40dp"
+                          android:orientation="horizontal"
+                          android:layout_marginBottom="8dp"
+                          android:layout_marginTop="8dp"
+            >
+                <com.google.android.material.button.MaterialButton
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                        android:text="0"
+                        app:iconTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        app:icon="@drawable/ic_likefilled"
+                />
+
+                <com.google.android.material.button.MaterialButton
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                        android:text="0"
+                        app:iconTint="@color/colorPrimary"
+                        android:textColor="@color/colorPrimary"
+                        app:icon="@drawable/ic_likefilled"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+            >
+
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="23"
+                          android:id="@+id/postCount"
+                          android:textColor="@color/darkTextColor"
+                          android:fontFamily="@font/osbold"
+                          android:textSize="18sp"
+                          android:textAlignment="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="23"
+                          android:id="@+id/followersCount"
+                          android:textColor="@color/darkTextColor"
+                          android:fontFamily="@font/osbold"
+                          android:textSize="18sp"
+                          android:textAlignment="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="23"
+                          android:id="@+id/followingCount"
+                          android:textColor="@color/darkTextColor"
+                          android:fontFamily="@font/osbold"
+                          android:textSize="18sp"
+                          android:textAlignment="center"
+                />
+
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+            >
+
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="gönderi"
+                          android:textColor="@color/darkTextColor"
+                          android:fontFamily="@font/oslight"
+                          android:textSize="14sp"
+                          android:textAlignment="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="takipçi"
+                          android:textColor="@color/darkTextColor"
+                          android:fontFamily="@font/oslight"
+                          android:textSize="14sp"
+                          android:textAlignment="center"
+                />
+
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:text="takip"
+                          android:textColor="@color/darkTextColor"
+                          android:fontFamily="@font/oslight"
+                          android:textSize="14sp"
+                          android:textAlignment="center"
+                />
+
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="#d9d9d9"
+                  android:layout_marginTop="16dp"
+            />
+
+
+        </LinearLayout>
+
+        <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rv_profile"
+                android:nestedScrollingEnabled="false"
+        >
+
+
+        </com.cooltechworks.views.shimmer.ShimmerRecyclerView>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.core.widget.NestedScrollView>

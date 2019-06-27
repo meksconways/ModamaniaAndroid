@@ -3,6 +3,7 @@ package com.modart.modamania.viewmodel
 import androidx.lifecycle.ViewModel
 import com.modart.modamania.feed.FeedViewModel
 import com.modart.modamania.login.LoginViewModel
+import com.modart.modamania.profile.ProfileViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -19,6 +20,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
     abstract fun bindLoginVM(viewModel: LoginViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProfileViewModel::class)
+    abstract fun bindProfileViewModel(viewModel: ProfileViewModel): ViewModel
 
 
 }
