@@ -136,6 +136,7 @@
                          app:layout_constraintEnd_toEndOf="parent"
                          android:layout_marginBottom="24dp"
                          android:id="@+id/progress"
+                         android:visibility="invisible"
                          android:layout_gravity="center"
             />
 

@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.feed_fragment.*
 
 class FeedFragment : BaseFragment() {
 
+
     companion object {
         fun newInstance() = FeedFragment()
     }
@@ -34,7 +35,7 @@ class FeedFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(activity!!,factory).get(FeedViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,factory).get(FeedViewModel::class.java)
         setToolbarTitle("Modamania")
         setToolbarFont(ToolbarFont.N)
         observeVM()

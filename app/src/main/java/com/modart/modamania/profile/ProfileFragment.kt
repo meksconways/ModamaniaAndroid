@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.modart.modamania.R
 import com.modart.modamania.base.BaseFragment
 import com.modart.modamania.util.ToolbarFont
+import com.modart.modamania.util.invisible
 import com.modart.modamania.util.loadImage
+import com.modart.modamania.util.visible
 import kotlinx.android.synthetic.main.profile_fragment.*
 
 class ProfileFragment : BaseFragment() {
@@ -41,7 +43,15 @@ class ProfileFragment : BaseFragment() {
 
     private fun observeVM() {
         viewModel.getPageLoading().observe(this, Observer {
-            if (it) rv_profile.showShimmerAdapter() else rv_profile.hideShimmerAdapter()
+            if (it) {
+                rv_profile.showShimmerAdapter()
+                lyt_profile.invisible()
+                rv_shimmer.showShimmerAdapter()
+            } else {
+                rv_profile.hideShimmerAdapter()
+                lyt_profile.visible()
+                rv_shimmer.hideShimmerAdapter()
+            }
         })
 
         viewModel.getProfileData().observe(this, Observer {

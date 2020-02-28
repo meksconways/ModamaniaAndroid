@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+            android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:id="@+id/lyt_profile"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@android:color/transparent"
+    />
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+    >
+
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                app:cardCornerRadius="70dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#d9d9d9"
+        >
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <View android:layout_width="160dp"
+              android:layout_height="24dp"
+              android:background="#d9d9d9"
+              android:layout_gravity="center"
+              android:layout_marginTop="16dp"
+
+        />
+        <View android:layout_width="120dp"
+              android:layout_height="16dp"
+              android:background="#d9d9d9"
+              android:layout_gravity="center"
+              android:layout_marginTop="8dp"
+        />
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_height="40dp"
+                      android:orientation="horizontal"
+                      android:layout_marginBottom="8dp"
+                      android:layout_marginTop="8dp"
+        >
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    app:iconTint="#d9d9d9"
+                    app:icon="@drawable/ic_likefilled"
+            />
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                    app:iconTint="#d9d9d9"
+                    android:textColor="@color/colorPrimary"
+                    app:icon="@drawable/ic_visibility"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+        >
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"
+                      android:text="0"
+                      android:textColor="#d9d9d9"
+                      android:textSize="18sp"
+                      android:textAlignment="center"
+            />
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"
+                      android:text="0"
+                      android:textColor="#d9d9d9"
+                      android:fontFamily="@font/osbold"
+                      android:textSize="18sp"
+                      android:textAlignment="center"
+            />
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"
+                      android:text="0"
+                      android:textColor="#d9d9d9"
+                      android:fontFamily="@font/osbold"
+                      android:textSize="18sp"
+                      android:textAlignment="center"
+            />
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+        >
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"
+                      android:text="gönderi"
+                      android:textColor="#d9d9d9"
+                      android:fontFamily="@font/oslight"
+                      android:textSize="14sp"
+                      android:textAlignment="center"
+            />
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"
+                      android:text="takipçi"
+                      android:textColor="#d9d9d9"
+                      android:fontFamily="@font/oslight"
+                      android:textSize="14sp"
+                      android:textAlignment="center"
+            />
+
+            <TextView android:layout_width="0dp"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"
+                      android:text="takip"
+                      android:textColor="#d9d9d9"
+                      android:fontFamily="@font/oslight"
+                      android:textSize="14sp"
+                      android:textAlignment="center"
+            />
+
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#d9d9d9"
+              android:layout_marginTop="16dp"
+        />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
